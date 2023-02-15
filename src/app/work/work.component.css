@@ -1,0 +1,15 @@
+.work-section {
+    padding: 50px;
+  }
+  
+  .work-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }

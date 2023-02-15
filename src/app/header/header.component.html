@@ -1,0 +1,29 @@
+<header>
+    <nav>
+      <i class="fa fa-bars menu-icon" (click)="toggleMenu()"></i>
+      <a routerLink="">Home</a>
+      <a routerLink="about">About</a>
+      <a routerLink="work">Work</a>
+      <a routerLink="contact">Contact</a>
+    </nav>
+    <div>
+      <nav>
+      <a routerLink="login">Login</a>
+      <a routerLink="signup">Signup</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main [ngClass]="{ 'with-open-side-nav': isMenuOpen }">
+    <router-outlet class="no-scroll"></router-outlet>
+  </main>
+  
+  <aside [ngClass]="{ 'open': isMenuOpen }">
+    <i class="fa fa-times close-icon" (click)="toggleMenu()"></i>
+    <ul>
+      <li><a routerLink="">Home</a></li>
+      <li><a routerLink="about">About</a></li>
+      <li><a routerLink="work">Work</a></li>
+      <li><a routerLink="contact">Contact</a></li>
+    </ul>
+  </aside>
