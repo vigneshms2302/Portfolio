@@ -1,7 +1,75 @@
-<p>home works!</p>
-<router-outlet></router-outlet>
+<div class="home-container">
+
+
 
 <h2>Welcome to My Portfolio</h2>
 <p>I'm a software developer, fitness enthusiast, and photography hobbyist. This is my platform to showcase my skills and works. Take a look around to learn more about me!</p>
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quasi id consequatur nam voluptatum ducimus velit consectetur ipsa deleniti, cumque iusto quis, tenetur laborum animi, perferendis repudiandae vitae placeat voluptas.</p>
+<!-- <div class="profile-card"><mat-card class="example-card" >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Vignesh</mat-card-title>
+      <mat-card-subtitle>Software Developer</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="download.jpg" alt="Photo of a Vignesh" width="200" height="200">
 
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  </div> -->
+  <div class="host">
+  <mat-card>
+    <div mat-card-avatar class="developer-image"></div>
+    <mat-card-header>
+      <mat-card-title>John Doe</mat-card-title>
+      <mat-card-subtitle>Software Developer</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>John is an experienced software developer with over 5 years of experience in building web applications using Angular and Node.js.</p>
+      <ul>
+        <li>Proficient in HTML, CSS, JavaScript, and TypeScript</li>
+        <li>Experience with Angular and React</li>
+        <li>Comfortable with Git and agile development methodologies</li>
+        <li>Excellent problem-solving and communication skills</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button routerLink="contact" matTooltip="contact me">Contact</button>
+      <button mat-button (click)="openDialog()" >View Profile</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+  
+<div class="container">
+  <h1></h1>
+  <p>Here you can find information about me and my projects.</p>
+
+  <mat-grid-list cols="3" rowHeight="300px">
+    <mat-grid-tile *ngFor="let item of dashboardItems">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ item.title }}</mat-card-title>
+        </mat-card-header>
+        <!-- <img mat-card-image [src]="item.imageUrl" alt="{{ item.altText }}" /> -->
+        <mat-card-content>
+          <p>{{ item.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>View Details</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</div>
+  
+<router-outlet></router-outlet></div>

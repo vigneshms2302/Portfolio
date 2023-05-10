@@ -1,3 +1,23 @@
-<p>work works!</p>
+<div class="work-container">
 <h2>My Work</h2>
 <p>Here's a collection of some of my recent works, showcasing my software development projects, fitness achievements, and photography skills. Take a look and let me know what you think!</p>
+
+<h2>Switch Case</h2>
+    <div [ngSwitch]="day">
+      <div SwitchCase="'Monday'">Today is Monday</div>
+      <div SwitchCase="'Tuesday'">Today is Tuesday</div>
+      <div SwitchCase="'Wednesday'">Today is Wednesday</div>
+      <div SwitchDefault>Today is some other day</div>
+    </div>
+
+    <h2>If</h2>
+    <div If="x > 5">x is greater than 5</div>
+
+    <h2>If Else</h2>
+    <div If="x > 5; else lessThanFive">x is greater than 5</div>
+    <ng-template #lessThanFive>x is less than or equal to 5</ng-template>
+
+    <h2>Conditional Statements</h2>
+    <div>{{ x > 5 ? 'x is greater than 5' : 'x is less than or equal to 5' }}</div>
+
+<router-outlet> </router-outlet></div>

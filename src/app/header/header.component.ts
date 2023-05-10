@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  isChecked = true;
+  isDarkTheme = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

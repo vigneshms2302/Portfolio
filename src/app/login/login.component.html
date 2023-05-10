@@ -1,4 +1,70 @@
 <div class="login-container">
+  <h1>Login</h1>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" class="form-control" name="username" [(ngModel)]="username" >
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" class="form-control" name="password" [(ngModel)]="password">
+    </div>
+    <div class="form-group">
+      <a href="#" class="forgot-password">Forgot password?</a>
+      <button type="submit" class="btn btn-primary" [disabled]="!isValid()">Submit</button>
+      <div style="clear:both"></div>
+    </div>
+  </form>
+  <div class="new-user">
+    <p>New user? <a routerLink="/signup" class="sign-up">Sign up</a></p>
+  </div>
+</div>
+<router-outlet></router-outlet>
+
+
+<!-- <div class="login-container">
+  <h1>Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    
+      This form uses Angular Reactive Forms.
+      The formGroup directive binds the FormGroup instance loginForm to the form element.
+      The (ngSubmit) event is bound to the onSubmit() method which is called when the form is submitted.
+    
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" class="form-control" formControlName="username">
+      <!-- 
+        This input element is bound to the FormControl instance username of the loginForm FormGroup.
+        The formControlName directive is used to associate the input element with the FormControl.
+    
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" class="form-control" formControlName="password">
+      <!-- 
+        This input element is bound to the FormControl instance password of the loginForm FormGroup.
+        The formControlName directive is used to associate the input element with the FormControl.
+    
+    </div>
+    <div class="form-group">
+      <a href="#" class="forgot-password">Forgot password?</a>
+      <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+      <!-- 
+        This button is used to submit the form and is disabled if the form is invalid.
+        The [disabled] attribute is bound to the valid property of the loginForm FormGroup.
+    
+      <div style="clear:both"></div>
+    </div>
+  </form>
+  <div class="new-user">
+    <p>New user? <a href="#" class="sign-up">Sign up</a></p>
+  </div>
+</div>
+<router-outlet></router-outlet>
+   -->
+
+
+<!-- <div class="login-container">
     <h1>Login</h1>
     <form>
       <div class="form-group">
@@ -12,11 +78,11 @@
       
       <div class="form-group">
         <a href="#" class="forgot-password">Forgot password?</a>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">LOGIN</button>
         <div style="clear:both"></div>
       </div>
     </form>
     <div class="new-user">
       <p>New user? <a href="#" class="sign-up">Sign up</a></p>
     </div>
-  </div>
+  </div> -->

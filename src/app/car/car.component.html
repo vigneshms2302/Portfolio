@@ -1,0 +1,47 @@
+<br><h1>Car Class Example</h1>
+<p>Click the buttons to interact with the cars.</p>
+
+<div>
+  <h3>My Car</h3>
+  <label>Make:</label>
+  <input type="text" [(ngModel)]="myCar.make" placeholder="Make">
+  <label>Model:</label>
+  <input type="text" [(ngModel)]="myCar.model" placeholder="Model">
+  <label>Color:</label>
+  <input type="text" [(ngModel)]="myCar.color" placeholder="Color">
+
+  <button (click)="myCar.start()">Start My Car</button>
+  <button (click)="myCar.stop()">Stop My Car</button>
+  <button (click)="myCar.honk()">Honk My Car</button>
+</div>
+
+<div>
+  <h3>Your Car</h3>
+  <label>Make:</label>
+  <input type="text" [(ngModel)]="yourCar.make" placeholder="Make">
+  <label>Model:</label>
+  <input type="text" [(ngModel)]="yourCar.model" placeholder="Model">
+  <label>Color:</label>
+  <input type="text" [(ngModel)]="yourCar.color" placeholder="Color">
+
+  <button (click)="yourCar.start()">Start Your Car</button>
+  <button (click)="yourCar.stop()">Stop Your Car</button>
+  <button (click)="yourCar.honk()">Honk Your Car</button>
+</div>
+
+
+
+
+
+
+
+<!-- <h1>Car Class Example</h1>
+<p>Click the buttons to interact with the cars.</p>
+<button (click)="myCar.start()">Start My Car</button>
+<button (click)="myCar.stop()">Stop My Car</button>
+<button (click)="myCar.honk()">Honk My Car</button>
+<br><br>
+<button (click)="yourCar.start()">Start Your Car</button>
+<button (click)="yourCar.stop()">Stop Your Car</button>
+<button (click)="yourCar.honk()">Honk Your Car</button>
+ -->

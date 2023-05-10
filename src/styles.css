@@ -1,12 +1,27 @@
+/* html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+} */
+
+body{
+  overflow: hidden;
+}
+
 /* You can add global styles to this file, and also import other style files */
 
-body {
+ /* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
-  
-   /* main {
+   */
+ /*  main {
     display: flex;
     width: 100%;
   } 
@@ -14,11 +29,14 @@ body {
    .with-open-side-nav {
     width: 85%;
   }  */
-  body {
+  /* body {
     overflow-x: hidden;
     overflow-y: hidden;
-  }
-  
+    height: 100%;
+  } */
+ 
+
+/*   
   header {
     background-color: #333;
     color: #fff;
@@ -63,9 +81,9 @@ body {
   
    h2 {
     margin: 0;
-  }
+  } */
   
-  form {
+  /* form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,35 +93,35 @@ body {
    form div {
     margin-bottom: 1em;
     width: 100%;
-  }
+  } */
   
-  form label, form input, form textarea {
+  /* form label, form input, form textarea {
     width: 100%;
   }
   
   form input[type="text"], form input[type="email"] {
     padding: 0.5em;
-  }
+  } */
   
-  form textarea {
+  /* form textarea {
     padding: 0.5em;
     min-height: 5em;
     resize: vertical;
-  }   
-  form button[type="submit"] {
+  }    */
+  /* form button[type="submit"] {
     background-color: #333;
     color: #fff;
     padding: 0.5em 1em;
     border: none;
     cursor: pointer;
-  } 
+  }  */
   
   
   
     
   
   
-   body{
+   /* body{
     background-color:rgba(100, 99, 99, 0.219);
     font-family: 'Roboto', sans-serif;
     margin:0px !important;
@@ -113,3 +131,5 @@ body {
       overflow: hidden;
     }
      
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }  */

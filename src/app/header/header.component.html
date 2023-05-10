@@ -3,27 +3,39 @@
       <i class="fa fa-bars menu-icon" (click)="toggleMenu()"></i>
       <a routerLink="">Home</a>
       <a routerLink="about">About</a>
+      <a routerLink="skills">Skills</a>
       <a routerLink="work">Work</a>
       <a routerLink="contact">Contact</a>
+      
     </nav>
     <div>
       <nav>
+       <mat-icon class="account-icon">account_circle</mat-icon> 
       <a routerLink="login">Login</a>
       <a routerLink="signup">Signup</a>
       </nav>
     </div>
   </header>
   
-  <main [ngClass]="{ 'with-open-side-nav': isMenuOpen }">
+  <main [ngClass]="{ 'with-open-side-nav': isMenuOpen }" class="content-container" class="main" [class.dark]="isDarkTheme" [class.light]="!isDarkTheme">
     <router-outlet class="no-scroll"></router-outlet>
   </main>
   
   <aside [ngClass]="{ 'open': isMenuOpen }">
     <i class="fa fa-times close-icon" (click)="toggleMenu()"></i>
     <ul>
-      <li><a routerLink="">Home</a></li>
-      <li><a routerLink="about">About</a></li>
-      <li><a routerLink="work">Work</a></li>
-      <li><a routerLink="contact">Contact</a></li>
+   
+      <li><a routerLink="">Home</a></li><mat-divider></mat-divider>
+      <li><a routerLink="about">About</a></li><mat-divider></mat-divider>
+      <li><a routerLink="skills">Skills</a></li><mat-divider></mat-divider>
+      <li><a routerLink="work">Work</a></li><mat-divider></mat-divider>
+      <li><a routerLink="contact">Contact</a></li><mat-divider></mat-divider><br>
+      <!-- <mat-slide-toggle [(ngModel)]="isChecked">Dark Mode: {{isChecked}}</mat-slide-toggle> -->
+      <!-- <button (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button> -->
+      <mat-slide-toggle [(ngModel)]="isDarkTheme">Dark Mode</mat-slide-toggle>
+
+
+      <!-- <mat-slide-toggle [(ngModel)]="isDarkTheme" [label]="isDarkTheme ? 'Dark Mode' : 'Light Mode'"></mat-slide-toggle> -->
+
     </ul>
   </aside>

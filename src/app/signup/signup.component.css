@@ -1,4 +1,629 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* background-color: #808080; 
+  color: #000;  */
+}
+#add{
+  width: 90%;
+}
+
+.clickable-icon {
+  cursor: pointer;
+}
+
+.container {
+  width: 800px;
+  height: 760px;
+  /* background-color: #fff; */
+  position: absolute;
+  top: 60%;
+  left: 50%;
+ 
+  transform: translate(-50%, -50%);
+  bottom: 50px;
+  margin-top: 100px;
+}
+
+
+.form-fields-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+#title{
+  text-align: center;
+  padding: 20px;
+  /* color: #0e0d0d; */
+}
+
+#f1,#f2,#f3,#f4,#f5,#f6,#f7,#f8{
+  width: 40%;
+}
+.mat-form-field {
+  width: 70%; /* subtract the margin from the width */
+}
+
+.address{
+  width: 90%;
+ padding:0px;
+  margin-left: 40px;
+  margin-bottom:25px;
+}
+.date-of-birth{
+   
+width: 40%;
+}
+.gender{
+  font-size: 20px;
+  /* color:#fff; */
+}
+#male{
+  padding: 10px;
+}
+.checkbox{
+  padding-left: 250px;
+  padding-top: 10px;
+  padding-bottom:10px;
+}
+
+.login{
+  text-align: center;
+  padding: 20px;
+  /* color: #fff; */
+}
+.submit-button{
+  width:90%;
+  padding:20px;
+ margin-left: 40px;
+ font-size: 20px;
+}
+/* .mat-card-title {
+  text-align: center;
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+button.submit-button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+form { 
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 #0a0a0a;
+}
+
+.container {
+ 
+  background-color: #fff;
+   justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+   max-width: 600px;  
+  margin-left: auto;
+  margin-right: auto;
+  height: 110vh;
+  margin-bottom: 260px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 100vh;
+  }
+}
+
+
+.mat-card {
+  background-color:#fff;
+  max-width: 120px;
+  width: 100%;
+}
+
+#b1,#b2,#b3,#b4,#b5,#b6,#b7{
+  width: 90%;
+  margin-left: 20px ;
+  margin-right: 10px;
+}
+#ct1{
+  margin-left: 220px;
+  padding: 10px;
+}
+.submit-button{
+  padding: 10px;
+  background-color: #0a0a0a;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+} */
+
+
+
+
+/* body {
+  font-family: monospace;
+}
+ form {
+    
+    align-items: center;
+    padding: 1em;
+  } 
+  
+   form div {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    width: 100%;
+  }
+.example-full-width {
+  width: 100%;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 450px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+  margin-top: 60px;
+ 
+}
+
+.example-form h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.example-button-row button {
+  margin-top: -100px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 450px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  bottom: 30px; 
+  margin-bottom: 10px;
+  background-color: #fff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+
+}
+
+ */
+
+
+
+/* body{
+  font-family: monospace;
+}  
+  .example-full-width {
+    width: 100%;
+  }
+  .example-form{
+   
+    min-width: 150px;
+    max-width: 450px;
+    width: 100%;
+    padding-bottom: 30px;
+    bottom:10px;
+    margin-bottom: 10px;
+    height: 100%;
+    background-color:   #fff;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 0, 0, 0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    margin-top: 60px;
+    
+  }
+  .example-form h3
+  {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: monospace;
+  }
+  .example-button-row button{
+      margin-top: 20px;
+      width: 100%;
+      background-color: #000000;
+      color: #ffffff;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+
+  }
+  .example-button-row button:hover {
+    background-color: #d2b1b1;
+    color: #000000;
+    transition: 0.2s;
+}
+  .mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  }
+ */
+
+
+
+/* .main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
 .login-container {
+  width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-radio-button {
+  margin-right: 20px;
+}
+
+.mat-checkbox {
+  margin-top: 20px;
+}
+
+p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+a {
+  color: #0077FF;
+  text-decoration: none;
+}
+
+button[type=submit] {
+  width: 100%;
+  margin-top: 20px;
+} */
+
+
+
+
+
+/* .login-container {
+  background-color: #adadad;
+  height: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin-bottom: 50px;
+}
+
+.form-container {
+  width: 70%;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 #0a0a0a;
+}
+
+h1 {
+  color: #0a0a0a;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+label {
+  color: #0a0a0a;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input.form-control,
+select.form-control {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 #0a0a0a;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button.btn-primary {
+  background-color: #0a0a0a;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button.btn-primary:hover {
+  background-color: #303030;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+} */
+
+
+
+
+
+
+
+
+/* 
+.login-container {
+  background-color: #adadad;
+  height: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin-bottom: 50px;
+}
+
+
+.form-container {
+  width: 70%;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 #0a0a0a;
+}
+
+h1 {
+  color: #0a0a0a;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex; /* add this to make the checkbox and label display side-by-side 
+  align-items: center; /* add this to vertically center the checkbox and label  
+}
+
+label {
+  color: #0a0a0a;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  flex-grow: 1; /* add this to make the label take up all remaining space 
+}
+
+input.form-control,
+select.form-control {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 #0a0a0a;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.checkbox-label {
+  display: flex; /* add this to make the checkbox display side-by-side with the label
+  align-items: center; /* add this to vertically center the checkbox 
+  font-size: 14px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 5px; /* add this to add spacing between the checkbox and label 
+}
+
+button.btn-primary {
+  background-color: #0a0a0a;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+p {
+  text-align: center; /* add this to center the "Already have an account?" message
+}
+.radio-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio-group input[type="radio"] + label {
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"]:checked + label:before {
+  content: '\2022';
+  color: #0a0a0a;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.radio-label input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio-label label {
+  margin-bottom: 0;
+} 
+.example-margin {
+  display: flex;
+  margin: 0 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-left: 50px;
+  padding-right: 30px;
+} */
+
+/* .login-container {
+  background-color: #adadad;
+  height: calc(100% - 150px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #0a0a0a;
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 #0a0a0a;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  color: #0a0a0a;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 14px;
+}
+
+input.form-control {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 #0a0a0a;
+  padding: 5px;
+  width: 100%;
+  font-size: 14px;
+}
+
+button.btn-primary {
+  background-color: #0a0a0a;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+}
+ */
+
+
+
+
+
+/* .login-container {
     background-color: #adadad;
     height: calc(100% - 150px);
     display: flex;
@@ -55,4 +680,4 @@
     width: 100%;
     cursor: pointer;
     font-size: 14px;
-  } 
+  }  */
