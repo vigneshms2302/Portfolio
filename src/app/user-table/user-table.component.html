@@ -1,0 +1,84 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>
+        <input type="text" [value]="user.name" [disabled]="!user.editing" [(ngModel)]="user.updatedName" *ngIf="user.editing">
+        <span *ngIf="!user.editing">{{ user.name }}</span>
+      </td>
+      <td>
+        <input type="email" [value]="user.email" [disabled]="!user.editing" [(ngModel)]="user.updatedEmail" *ngIf="user.editing">
+        <span *ngIf="!user.editing">{{ user.email }}</span>
+      </td>
+      <td>
+        <button (click)="editUser(user)" *ngIf="!user.editing">Edit</button>
+        <button (click)="updateUser(user)" *ngIf="user.editing">Save</button>
+        <button (click)="deleteUser(user.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<form #userForm="ngForm" (ngSubmit)="addUser(userForm)">
+  <input type="text" placeholder="Name" [(ngModel)]="newUser.name" name="name" required>
+  <input type="email" placeholder="Email" [(ngModel)]="newUser.email" name="email" required>
+  <button type="submit">Add User</button>
+</form>
+
+
+
+
+
+
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>
+        <input type="text" [value]="user.name" [disabled]="!user.editing" [(ngModel)]="user.updatedName" *ngIf="user.editing">
+        <span *ngIf="!user.editing">{{ user.name }}</span>
+      </td>
+      <td>
+        <input type="email" [value]="user.email" [disabled]="!user.editing" [(ngModel)]="user.updatedEmail" *ngIf="user.editing">
+        <span *ngIf="!user.editing">{{ user.email }}</span>
+      </td>
+      <td>
+        <button (click)="editUser(user)" *ngIf="!user.editing">Edit</button>
+        <button (click)="updateUser(user)" *ngIf="user.editing">Save</button>
+        <button (click)="deleteUser(user.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr> -->
+
+<!-- 
+<form [formGroup]="newUserForm" (submit)="addUser()">
+  <input type="text" placeholder="Name" formControlName="name">
+  <div *ngIf="name?.errors?.['required']">Name is required.</div>
+
+  <input type="email" placeholder="Email" formControlName="email">
+  <div *ngIf="email?.errors?.['required']">Email is required.</div>
+  <div *ngIf="email?.errors?.['email']">Invalid email format.</div>
+
+  <button type="submit">Add User</button>
+</form> -->

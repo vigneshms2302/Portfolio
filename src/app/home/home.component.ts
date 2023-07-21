@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
@@ -11,6 +11,59 @@ import { MatGridListModule } from '@angular/material/grid-list';
 })
 export class HomeComponent implements OnInit {
   
+
+   
+// start of component interaction
+
+receivedData: any;
+
+receiveFormData(data: any) {
+  this.receivedData = data;
+}
+
+
+  counter = 0;
+  isCounterRunning = false;
+
+  startCounter() {
+    this.counter = 0;
+    this.isCounterRunning = true;
+    this.updateCounter();
+  }
+
+  stopCounter() {
+    this.isCounterRunning = false;
+  }
+
+  private updateCounter() {
+    if (this.isCounterRunning) {
+      setTimeout(() => {
+        this.counter++;
+        this.updateCounter();
+      }, 1000);
+    }
+  }
+ 
+
+  myStringValue: string = 'Hello, Contact Component!';
+  myNumberValue: number = 42;
+  myArrayValue: any[] = [1, 2, 3, 4, 5];
+ 
+  
+  message!: string;
+
+  receiveMessage(message: string) {
+    this.message = message;
+  }
+
+  // receivedData!: string;
+
+  
+  
+  
+// end of component interaction
+
+
   successMessage: string;
   dashboardItems = [
     {

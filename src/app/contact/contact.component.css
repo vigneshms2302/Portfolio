@@ -1,29 +1,121 @@
-/* .contact-section {
-    background-color: #f2f2f2;
-    padding: 50px;
+  .contact-container{
+    padding-top: 0px;
+    padding-bottom:40px;
+margin-bottom: 3%;
+display: flex;
+justify-content: space-between;
+  }
+ .h3s{
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 4.47rem;
+  color: var(--black);
+ }
+   /* .container {
+    
+    align-items: center;
+    width: 800px;
+    height: 200px;
+    position: relative; */
+    /* top:30%; */
+    /* left: 50%;
+       transform: translate(-50%, -50%);
+        margin-top: 100px;
+        padding-top: 5%;
+        padding-bottom:80px; */
+  /* } */
+  .contact-left{
+    /* background-color: aqua; */
+    top: 10%;
+    width: 50%;
+    position: relative;
+    padding: 0px 32px;
+
+    border: none;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: var(--font-neue);
+    font-size: 62.5%;
+    transition: all 0.3s ease-in-out 0s;
+    margin-right: 50%;
+  }
+  .contact-right{
+    position: relative;
+    /* background-color: blue; */
+    top:0px;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 0px;
+   top:0%;
+  }
+  #f1{
+    width:90%;
+    margin-left: 5%;
+  }
+  #h1{
     text-align: center;
+    padding: 2%;
+    color: #f2f2f2;
+  }
+  #b1{
+    left: 40%;
+    padding: 2%;
+    width: 20%;
+  }
+  /* .profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    transition: width 0.3s ease;
   }
   
-  input[type="text"], input[type="email"], textarea {
+  .profile-image-container {
+    flex-basis: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    background-color: #ddd;
+    height: 100%;
+    transition: transform 0.3s ease;
   }
   
-  .contact-container{
-    padding-top: 40px;
- 
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  input[type="submit"] {
-    background-color: #333;
+  
+  .profile-card:hover {
+    width: 100%;
+  }
+  
+  .profile-card:hover .profile-image-container {
+    transform: scale(1.1);
+  }
+  
+  .profile-details {
+    flex-basis: 50%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  } */
-  .contact-container{
-    padding-top: 40px;
- 
+    text-align: center;
+    transition: right 0.3s ease;
+    display: none;
   }
+  
+  .profile-card:hover .profile-details {
+    right: 0;
+    display: block;
+  } */
+ 
+  

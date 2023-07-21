@@ -13,7 +13,12 @@ import { SignupsComponent } from './signups/signups.component';
 
 import { DialogComponent} from './dialog/dialog.component';
 
-
+import {CurrencyComponent} from './currency/currency.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { SkillsTableComponent } from './skills-table/skills-table.component';
+import { UserManagementComponent } from './user-management/user-management.component';
+import { UserTableComponent } from './user-table/user-table.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
@@ -21,11 +26,19 @@ const routes: Routes = [
   { path: 'work', component: WorkComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'contacts', component: ContactsComponent },
   { path: 'signup', component: SignupComponent },
   {path:'car' , component: CarComponent },
   {path:'signups' , component: SignupsComponent },
+  { path: 'currency', component: CurrencyComponent },
+ {path:'skillstable', component:SkillsTableComponent},
+ {path:'users', component:UserManagementComponent},
+ {path:'usertable', component:UserTableComponent},
+{path:'dashboard', component:DashboardComponent},
   { path: '**', redirectTo: '' },
-  {path :'dialog' , component: DialogComponent}
+  {path :'dialog' , component: DialogComponent},
+ 
+
 ];
 
 @NgModule({

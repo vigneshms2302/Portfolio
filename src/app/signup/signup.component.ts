@@ -2,6 +2,7 @@ import { Renderer2, ElementRef  } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DateFilterFn } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-signup',
@@ -31,7 +32,6 @@ export class SignupComponent {
   zip ='';
   
   
- 
   constructor(private renderer: Renderer2, private el: ElementRef) { }
 
   onMouseEnter() {
@@ -49,6 +49,10 @@ export class SignupComponent {
    
     console.log('Selected country:', event.value);
   }
+  onKeyUp(event: any) {
+    console.log(event.target.value);
+  }
+  
   onNameBlur() {
     if (this.name.length > 0) {
       console.log('Name:',this.name);
@@ -114,13 +118,31 @@ export class SignupComponent {
       // Handle clear button click
     }
   }
-  
+  dateFilter: DateFilterFn<Date | null> = (date: Date | null) => {
+    if (date === null) {
+      return true; // Allow null values
+    }
+
+    const disabledDates = [
+      new Date(2021, 8, 10), // 09/10/2021
+      new Date(2021, 10, 14), // 14/11/2021
+      new Date(2021, 11, 25), // 25/12/2021
+      new Date(2021, 11, 30), // 30/12/2021
+      new Date(2021, 11, 31), // 31/12/2021
+      new Date(2022, 0, 1), // 01/01/2022
+      new Date(2022, 1, 2), // 02/02/2022
+      new Date(2023, 4, 20) // 20/05/2023
+    ];
+
+    const isWeekend = date.getDay() === 0 || date.getDay() === 6;
+
+    return !disabledDates.some(disabledDate => this.isSameDate(date, disabledDate)) && !isWeekend;
+  };
+
+  private isSameDate(date1: Date, date2: Date): boolean {
+    return date1.toDateString() === date2.toDateString();
+  }
 }
-
-
-
-
-
 
 // import { Component, OnInit } from '@angular/core';
 

@@ -47,9 +47,22 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { MatDialogRef} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
-
+import { ThemeService } from './theme.service';
 import { MatGridListModule } from '@angular/material/grid-list';
-
+import { CurrencyComponent } from './currency/currency.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { ContactsComponent } from './contacts/contacts.component';
+import { SkillsTableComponent } from './skills-table/skills-table.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { UserManagementComponent } from './user-management/user-management.component';
+import { UserService } from './user-management/user.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserTableComponent } from './user-table/user-table.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { NgxGraphModule } from '@swimlane/ngx-graph';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +81,14 @@ import { MatGridListModule } from '@angular/material/grid-list';
     ValidationComponent,
     SignupsComponent,
     DialogComponent,
+    CurrencyComponent,
+    ContactsComponent,
+    SkillsTableComponent,
+    UserManagementComponent,
+    UserTableComponent,
+    UserFormComponent,
+    DashboardComponent,
+    
    
    
   ],
@@ -92,7 +113,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatSlideToggleModule,
     MatToolbarModule,
     MatTooltipModule,
-   
+    MatTabsModule,
     
     MatButtonModule,
     
@@ -100,11 +121,17 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatDividerModule,
     MatListModule,
     MatDialogModule, 
-    MatGridListModule
+    MatGridListModule,
+    MatPaginatorModule,
+    HttpClientModule,
+    FormsModule,
+    MatMenuModule,
+    NgxGraphModule 
     
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ThemeService,UserService],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
 

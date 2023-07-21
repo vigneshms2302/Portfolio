@@ -1,8 +1,53 @@
 <div class="work-container">
 <h2>My Work</h2>
 <p>Here's a collection of some of my recent works, showcasing my software development projects, fitness achievements, and photography skills. Take a look and let me know what you think!</p>
+<div class="sort-container">
+  <label for="sort-select">Sort by:</label>
+  <select id="sort-select" [(ngModel)]="selectedSortOption" (change)="sortProjects()">
+    <option value="name">Name</option>
+    <option value="date">Date</option>
+  </select>
+</div>
 
-<h2>Switch Case</h2>
+<ul class="projects-list">
+  <li *ngFor="let project of projects">
+    <span class="project-name">{{ project.name }} - </span>
+    <span class="project-date">{{ project.date | date }}</span>
+  </li>
+</ul>
+
+
+
+<h1 class="pp"><span>MY PAST PROJECTS</span></h1>
+<h2>Project Details</h2>
+
+<!-- Display project category in lowercase -->
+<p>Category: {{ project.category | lowercase }}</p>
+
+<!-- Display project title in uppercase -->
+<h3>{{ project.title | uppercase }}</h3>
+
+<!-- Display project start date using date format -->
+<p>Start Date: {{ project.startDate | date: 'dd MMM yyyy' }}</p>
+
+<!-- Display pricing information -->
+<p>Price: {{ product.price | currency: 'USD' }}</p>
+
+<!-- Display technology stack -->
+<p>Technology Stack: {{ technologyStack | json }}</p>
+
+<!-- Display progress percentage -->
+<p>Progress: {{ progress | percent }}</p>
+
+<!-- Display number of projects with limited decimal places -->
+<p>Number of Projects: {{ numberOfProjects | number: '1.0-0' }}</p>
+
+<!-- Display excerpt or teaser with limited text length -->
+<p>{{ text | slice: 0:100 }}</p>
+
+
+
+<!-- <h2>Switch Case</h2>
     <div [ngSwitch]="day">
       <div SwitchCase="'Monday'">Today is Monday</div>
       <div SwitchCase="'Tuesday'">Today is Tuesday</div>
@@ -18,6 +63,6 @@
     <ng-template #lessThanFive>x is less than or equal to 5</ng-template>
 
     <h2>Conditional Statements</h2>
-    <div>{{ x > 5 ? 'x is greater than 5' : 'x is less than or equal to 5' }}</div>
+    <div>{{ x > 5 ? 'x is greater than 5' : 'x is less than or equal to 5' }}</div> -->
 
 <router-outlet> </router-outlet></div>

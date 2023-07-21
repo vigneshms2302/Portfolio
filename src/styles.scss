@@ -1,0 +1,21 @@
+
+
+/* Dark Theme */
+.dark-theme .mat-tab-label {
+    color: white;
+  }
+  
+  /* Light Theme */
+  .light-theme .mat-tab-label {
+    color: black;
+  }
+  // Define your custom theme
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: 'pink',
+    accent: 'deep-purple',
+    warn: 'red',
+  )
+));
+// Apply the custom theme
+@include mat.all-component-themes($custom-theme);

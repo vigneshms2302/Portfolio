@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef,Input, Output, EventEmitter  } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
@@ -12,6 +12,40 @@ import { SelectionModel } from '@angular/cdk/collections';
 })
 export class SkillsComponent implements OnInit {
 
+
+// start of component interaction
+counter = 0;
+  isCounterRunning = false;
+
+  @Output() startCounterEvent = new EventEmitter<void>();
+  @Output() stopCounterEvent = new EventEmitter<void>();
+
+  startCounter() {
+    this.startCounterEvent.emit();
+    this.isCounterRunning = true;
+    this.updateCounter();
+  }
+
+  stopCounter() {
+    this.stopCounterEvent.emit();
+    this.isCounterRunning = false;
+  }
+
+  private updateCounter() {
+    setTimeout(() => {
+      if (this.isCounterRunning) {
+        this.counter++;
+        this.updateCounter();
+      }
+    }, 1000);
+  }
+// end of component interaction
+
+
+  skills: string[] = ['HTML', 'CSS', 'JavaScript', 'Angular', 'React', 'Node.js'];
+  filteredSkills!: string[];
+  searchTerm!: string;
+
   displayedColumns: string[] = ['skill', 'proficiencyLevel', 'experience', 'certification'];
   dataSource: MatTableDataSource<any> = new MatTableDataSource<any>();
   skillForm: FormGroup = new FormGroup({
@@ -24,7 +58,9 @@ export class SkillsComponent implements OnInit {
 
   @ViewChild('addSkillDialog') addSkillDialog!: TemplateRef<any>;
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {
+    this.filteredSkills = this.skills;
+   }
 
   ngOnInit(): void {
     this.dataSource.data = [
@@ -60,8 +96,20 @@ export class SkillsComponent implements OnInit {
       this.dialog.closeAll();
     }
   }
+ 
+  
+
+  filterSkills() {
+    this.filteredSkills = this.skills.filter(skill => skill.toLowerCase().includes(this.searchTerm.toLowerCase()));
+  }
 
 }
+
+
+
+
+
+
 
 
 

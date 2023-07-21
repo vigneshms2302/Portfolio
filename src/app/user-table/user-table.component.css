@@ -1,0 +1,47 @@
+/* user-table.component.css */
+
+table {
+   margin-top: 10%;
+    width: 70%;
+    margin-bottom: 100px;
+    border-collapse: collapse;
+  }
+  
+  th.mat-header-cell,
+  td.mat-cell {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th.mat-header-cell {
+    font-weight: bold;
+  }
+  
+  .mat-cell {
+    word-break: break-all;
+  }
+  
+  .actions-column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .button-group {
+    margin-left: 10px;
+  }
+  
+  .new-user-row {
+    background-color: #f0f0f0;
+  }
+  
+  .new-user-row input {
+    border: none;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .new-user-row button {
+    margin-left: 10px;
+  }
+  

@@ -1,75 +1,163 @@
+
+  <section class="home-section">
+    <div class="home-left">
+  <div class="home-content">
+    <h1 class="high">
+      <span class="highlighted">Hi, I am</span><br><br><br>
+
+      <span class="name">Vignesh.</span><br>
+    </h1>
+    <h2 class="description">I build things for the web.</h2>
+    <p class="summary">
+      I’m a software engineer specializing  <br>in building (and occasionally designing)<br> exceptional digital experiences.
+      Currently, <br>I’m focused on building accessible,<br> human-centered products at Upstatement.
+    </p>
+  </div>
+  <!-- <div class="logo">
+    <span class="logo-text">Contact Me</span>
+  </div> -->
+  <div class="logo">  
+    <span class="logo-text">Contact Me</span>
+    <span class="logo-icon">    
+      <i class="fa fa-paper-plane"></i> <!-- Send icon -->
+    </span>
+  </div>
+</div><br>
+<div class="home-right">
+  <div class="vigneshimage-container">
+    <img src="assets/vignesh.jpg" alt="Your Image" class="your-image-class">
+  </div>
+</div>
+
+</section>
+
+
 <div class="home-container">
 
-
-
+  
 <h2>Welcome to My Portfolio</h2>
 <p>I'm a software developer, fitness enthusiast, and photography hobbyist. This is my platform to showcase my skills and works. Take a look around to learn more about me!</p>
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quasi id consequatur nam voluptatum ducimus velit consectetur ipsa deleniti, cumque iusto quis, tenetur laborum animi, perferendis repudiandae vitae placeat voluptas.</p>
-<!-- <div class="profile-card"><mat-card class="example-card" >
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Vignesh</mat-card-title>
-      <mat-card-subtitle>Software Developer</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="download.jpg" alt="Photo of a Vignesh" width="200" height="200">
-
+  
+<div class="profile-card">
+  <div class="profile-image-container">
+    <img class="profile-image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg" alt="Profile image">
+  </div>
+  <div class="profile-details">
+    <h2 class="profile-name" style="font-size: 2.5em; color: #0e71db;">Vignesh</h2>
+    <p class="profile-description" style="color: #ac9a9a; font-size: 1.5em;">Software Developer</p>
     <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
+      <p style="font-size: 1.8em; font-weight: bold; color: #0e71db;">Vignesh is a highly skilled software developer with over 5 years of experience in building responsive and user-friendly web applications using Angular and Node.js.</p>
+      <ul>
+        <li style="font-size: 1.3em; color: #0e71db;">Proficient in HTML, CSS, JavaScript, and TypeScript</li>
+        <li style="font-size: 1.3em; color: #0e71db;">Expertise in Angular and React frameworks</li>
+        <li style="font-size: 1.3em; color: #0e71db;">Comfortable with Git and agile development methodologies</li>
+        <li style="font-size: 1.3em; color: #0e71db;">Excellent problem-solving and communication skills</li>
+      </ul>
+      <p style="font-size: 1.8em; font-weight: bold; color: #0e71db;">In his current role, Vignesh has delivered multiple successful projects, collaborating with cross-functional teams and ensuring that his solutions are scalable, maintainable, and performant.</p>
+      <p style="font-size: 1.5em; color: #ac9a9a;">Vignesh is passionate about learning new technologies and keeping up with industry trends. He enjoys participating in hackathons and open-source projects in his free time.</p>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-  </div> -->
-  <div class="host">
-  <mat-card>
-    <div mat-card-avatar class="developer-image"></div>
-    <mat-card-header>
-      <mat-card-title>John Doe</mat-card-title>
-      <mat-card-subtitle>Software Developer</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>John is an experienced software developer with over 5 years of experience in building web applications using Angular and Node.js.</p>
+</div>
+  
+</div>
+
+
+
+<!-- 
+<mat-card class="snap">
+  <div class="image-container">
+    <img mat-card-image src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg" alt="image of vignesh" />
+    <div class="card-content">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg" alt="profile-sample4" class="profile" />
+      <div class="right">
+      <h2 mat-card-title>Vignesh<span>Software Developer</span></h2>
+      <mat-card-content>
+      <p><h4>Vignesh is an experienced software developer with over 5 years of experience in building web applications using Angular and Node.js.</h4>
       <ul>
         <li>Proficient in HTML, CSS, JavaScript, and TypeScript</li>
         <li>Experience with Angular and React</li>
         <li>Comfortable with Git and agile development methodologies</li>
         <li>Excellent problem-solving and communication skills</li>
       </ul>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button routerLink="contact" matTooltip="contact me">Contact</button>
-      <button mat-button (click)="openDialog()" >View Profile</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
-  
-<div class="container">
-  <h1></h1>
-  <p>Here you can find information about me and my projects.</p>
+    </mat-card-content></div>
 
-  <mat-grid-list cols="3" rowHeight="300px">
-    <mat-grid-tile *ngFor="let item of dashboardItems">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>{{ item.title }}</mat-card-title>
-        </mat-card-header>
-        <!-- <img mat-card-image [src]="item.imageUrl" alt="{{ item.altText }}" /> -->
-        <mat-card-content>
-          <p>{{ item.description }}</p>
-        </mat-card-content>
+    
+      <div mat-card-actions>
+        
         <mat-card-actions>
-          <button mat-button>View Details</button>
+          <button class="follow" mat-button routerLink="contact" matTooltip="contact me">Contact</button>
+          <button class="info" mat-button (click)="openDialog()" >View Profile</button>
         </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+      </div>
+    </div>
+  </div>
+</mat-card> -->
+<br><h1><p>Below you can find information about my projects.</p></h1><br>
+<div class="cards-container">
+<mat-card class="snip1336">
+  <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_d1zizInZNYJH7tW-5AQL0Voz3GqBKQBrUw&usqp=CAU" alt="sample87" />
+  <mat-card-content>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg" alt="profile-sample4" class="profile" />
+    <h2 mat-card-title>Face-Login<span>Project-1</span></h2>
+    <p mat-card-subtitle>The implementation of face login for web applications involves capturing an image of the user's face using a camera or webcam. The image is then processed using facial recognition algorithms to identify the user. The system compares the user's face to a previously stored image to authenticate the user's identity. If the system recognizes the user's face, the login process is successful, and the user gains access to the web application  it offers an added layer of security to the login process, as facial recognition is difficult to fake or spoof.</p>
+    <div mat-card-actions>
+      <button mat-button class="follow">Follow Project</button>
+      <button mat-button class="info">More Info</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+<mat-card class="snip1336 hover">
+  <img mat-card-image src="https://img.freepik.com/free-psd/clean-resume-cv-design-template_237398-210.jpg?size=626&ext=jpg&ga=GA1.1.1503212662.1683711960&semt=sph" style="height:210px" alt="sample74" />
+  <mat-card-content>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample2.jpg" alt="profile-sample2" class="profile" />
+    <h2 mat-card-title>Resume Builder<span>Project-2</span></h2>
+    <p mat-card-subtitle>A resume builder project is a tool that helps individuals create professional-looking resumes quickly and easily. With the increasing competition in the job market, having a well-crafted resume that showcases your skills and experience is crucial.
+      It is a useful tool for anyone looking to create a polished and effective resume for their job search.
+      It includes interface that guides users through the process of creating a resume. It may include pre-designed templates that users can choose from, or allow users to customize the layout and design of their resume.</p>
+    <div mat-card-actions>
+      <button mat-button class="follow">Follow Project</button>
+      <button mat-button class="info">More Info</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+<mat-card class="snip1336">
+  <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXZzYrhA6ENUTVHg7_hyUgBR0_IoZ0y5j7cg&usqp=CAU" alt="sample69" />
+  <mat-card-content>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg" alt="profile-sample5" class="profile" />
+    <h2 mat-card-title>Indian sign language <span>Project-3</span></h2>
+    <p mat-card-subtitle>The project aims to facilitate better communication between the hearing-impaired and non-hearing-impaired individuals, particularly in scenarios such as remote work, education, and telemedicine.
 
+      The project involves  hand tracking and detection, feature extraction, gesture recognition, and natural language processing. Advanced machine learning techniques such as deep learning and convolutional neural networks (CNNs) are often employed to achieve high accuracy and robustness in the recognition process.</p>
+    <div mat-card-actions>
+      <button mat-button class="follow">Follow Project</button>
+      <button mat-button class="info">More Info</button>
+    </div>
+  </mat-card-content>
+</mat-card>
 </div>
-  
+
+<!-- start of component interaction -->
+
+
+  <h1>Skills</h1>
+  <app-skills (startCounter)="startCounter()" (stopCounter)="stopCounter()"></app-skills>
+
+ 
+  <app-contact 
+  [stringValue]="myStringValue" 
+  [numberValue]="myNumberValue" 
+  [arrayValue]="myArrayValue" (messageEvent)="receiveMessage($event)" (formData)="receiveFormData($event)"
+></app-contact>
+<p>Message from Contact: {{ message }}</p>
+
+
+<div *ngIf="receivedData">
+  <h2>Received Form Data:</h2>
+  <p>Name: {{ receivedData.name }}</p>
+  <p>Email: {{ receivedData.email }}</p>
+  <p>Message: {{ receivedData.message }}</p>
+</div>
+<!-- stop of component interaction -->
+
 <router-outlet></router-outlet></div>
+

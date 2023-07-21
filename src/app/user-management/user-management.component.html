@@ -1,0 +1,32 @@
+<!-- User management content -->
+<div class="user-management">
+    <p>user-management works!</p>
+    <h2>User Management</h2>
+  
+    <!-- Display users -->
+    <ul>
+      <li *ngFor="let user of users">
+        {{ user.name }}
+        <button (click)="deleteUser(user.id)">Delete</button>
+      </li>
+    </ul>
+  
+    <!-- Create user form -->
+    <form class="create-user-form" (submit)="createUser()">
+      <input type="text" name="name" placeholder="Name" required [(ngModel)]="userForm.value.name">
+      <input type="email" name="email" placeholder="Email" required [(ngModel)]="userForm.value.email">
+      <input type="text" name="username" placeholder="Username" required [(ngModel)]="userForm.value.username">
+      <input type="hidden" name="id" [(ngModel)]="userForm.value.id">
+      <button type="submit">Create</button>
+    </form>
+  
+    <!-- Update user form -->
+    <form class="update-user-form" (submit)="updateUser()">
+      <input type="hidden" name="id" [(ngModel)]="userForm.value.id">
+      <input type="text" name="name" placeholder="Name" required [(ngModel)]="userForm.value.name">
+      <input type="email" name="email" placeholder="Email" required [(ngModel)]="userForm.value.email">
+      <input type="text" name="username" placeholder="Username" required [(ngModel)]="userForm.value.username">
+      <button type="submit">Update User</button>
+    </form>
+  </div>
+  

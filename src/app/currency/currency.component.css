@@ -1,0 +1,15 @@
+.currency-converter {
+    display: grid;
+    grid-template-columns: 150px 200px;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .currency-converter label {
+    font-weight: bold;
+  }
+  
+  .currency-converter input {
+    width: 100%;
+  }
+  

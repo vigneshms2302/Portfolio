@@ -1,0 +1,49 @@
+<div class="contact-container">
+    <div class="contact-left">
+           <h3 class="h3s">I am not <br>hard to find,<br> let's <span style="color: #4fcbeb;">design</span> something <br>truly spectacular!</h3>
+    </div>
+    <div class="contact-right" style="background-color: black;">
+      <mat-card>
+        <mat-card-title id="h1">Contact Form</mat-card-title>
+        <mat-card-content>
+          <form (submit)="submitForm()">
+            <mat-form-field id="f1">
+              <input matInput placeholder="Name" [(ngModel)]="name" name="name" required>
+            </mat-form-field>
+            <br>
+            <mat-form-field id="f1">
+              <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+            </mat-form-field>
+            <br>
+            <mat-form-field id="f1">
+              <textarea matInput placeholder="Message" placeholder="Hi Vignesh, I have an idea which needs your expertise......" [(ngModel)]="message" name="message" required></textarea>
+            </mat-form-field>
+            <br>
+            <button id="b1" mat-raised-button color="#4fcbeb" type="submit" style="background-color:#27afd1;">Submit</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
+
+  <section class="home-section">
+    <div class="home-content">
+      <h1>
+        <span class="highlighted">Hi, my name is</span><br />
+        <span class="name">Vignesh.</span>
+      </h1>
+      <h2 class="description">I build things for the web.</h2>
+      <p class="summary">
+        I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences.
+        Currently, I’m focused on building accessible, human-centered products at Upstatement.
+      </p>
+    </div>
+    <div class="logo">
+      <span class="logo-text">VIGNESH</span>
+    </div>
+  </section>
+  
+  
+
+  

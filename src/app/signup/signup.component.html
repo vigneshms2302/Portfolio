@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" >
   <mat-card >
     <mat-card-title id="title">NEW REGISTRATION</mat-card-title>
     <mat-card-content>
@@ -6,8 +6,9 @@
         <div class="form-fields-container">
           <mat-form-field id="f1">
             <mat-label>Name</mat-label>
-            <input matInput name="name" [(ngModel)]="name"  (blur)="onNameBlur()" required>
-           
+            <input matInput name="name" [(ngModel)]="name"  (blur)="onNameBlur()" [value]="name | uppercase" (keyup)="onKeyUp($event)" required>
+            
+
           </mat-form-field>
 <!-- 
            <mat-form-field>
@@ -27,7 +28,7 @@
           
           <mat-form-field id="f2">
             <mat-label id="">Email</mat-label>
-            <input matInput type="email"  name="email" [(ngModel)]="email" (blur)="onEmailBlur()" required  >
+            <input matInput type="email"  name="email" [(ngModel)]="email" (blur)="onEmailBlur()" [value]="email | lowercase" (keyup)="onKeyUp($event)" required  >
             
           </mat-form-field>
         </div>
@@ -81,7 +82,7 @@
         <div class="form-fields-container">
           <mat-form-field appearance="fill" class="date-of-birth" id="f5">
             <mat-label>Date Of Birth</mat-label>
-            <input matInput [matDatepicker]="picker" name="dateOfBirth" [(ngModel)]="dateOfBirth" (dateChange)="onDateChange($event)" required >
+            <input matInput [matDatepicker]="picker" name="dateOfBirth" [(ngModel)]="dateOfBirth" (dateChange)="onDateChange($event)" required [matDatepickerFilter]="dateFilter">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
@@ -132,7 +133,7 @@
 
 
         <div class="login">
-          <label>Already have an account? <a routerLink="/login"  style="color:rgb(189, 102, 102)">Login</a></label></div>
+          <label>Already have an account? <a routerLink="/login"  style="color: #2980b9">Login</a></label></div>
           <br>
                   </form>
         </mat-card-content>

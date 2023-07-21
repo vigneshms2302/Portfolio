@@ -1,44 +1,29 @@
-h1 {
+/* h1 {
     text-align: center;
     color: #333;
     margin-top: 5px;
-  }
+  } */
   
+  .home-left{
+    width: 50%;
+    /* background-color: white; */
+  }
+  .home-right{
+    width: 40%;
+    /* background-color: #2980b9; */
+    margin-left: 60%;
+    margin-top:-75%;
+    
+    /* position: fixed; */
+    margin-right: 0%;
+  }
   .home-container{
-    padding-top: 40px;
+    padding-top: 60px;
  padding-bottom: 40px;
  
   }
 
- 
-
-  /* .example-card {
-    /*max-width: 500px;
-    
-  }
-  
-  .example-header-image {
-    background-image: url(download.jpg);
-    background-size:20px;
-  }
-  
-  .profile-card{
-    width: 800px;
-  height: 30px;
-  /* background-color: #fff; 
-  position: absolute;
-  top: 25%;
-  left: 50%;
- 
-  transform: translate(-50%, -50%);
-  bottom: 50px;
-  margin-top: 100px;
-  }
-  .mat-card-image {
-  width: 200px;
-  height: 200px;
-} */
-.mat-card {
+  .mat-card {
   height: 100%;
   width: 100%;
   display: flex;
@@ -53,12 +38,21 @@ h1 {
   width: 100%;
 }
 
-.developer-image {
+/* .developer-image {
   background-image: url(download.jpg);
   background-size: cover;
   width: 100%;
   height: 50%;
   border-radius: 50%;
+} */
+.developer-image {
+  width: 100px; /* adjust to your preferred size */
+  height: 100px; /* adjust to your preferred size */
+  border-radius: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("project1.jpg"); /* replace with your own image URL */
 }
 
 .mat-card-title {
@@ -67,4 +61,412 @@ h1 {
 
 .mat-card-subtitle {
   text-align: center;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1500px;
+  /* margin: 0 auto; */
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.snip1336 {
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 400px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #141414;
+
+}
+
+.snip1336 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.snip1336 img {
+  max-width: 100%;
+  vertical-align: top;
+  opacity: 0.85;
+}
+
+.snip1336 figcaption {
+  width: 100%;
+  background-color: #141414;
+  padding: 25px;
+  position: relative;
+}
+
+.snip1336 figcaption:before {
+  position: absolute;
+  content: '';
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 0 0 400px;
+  border-color: transparent transparent transparent #141414;
+}
+
+.snip1336 figcaption a {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  display: inline-block;
+  opacity: 0.65;
+  width: 47%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.snip1336 figcaption a:hover {
+  opacity: 1;
+}
+
+.snip1336 .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+  z-index: 1;
+  max-width: 90px;
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.snip1336 .follow {
+  margin-right: 4%;
+  border-color: #2980b9;
+  color: #2980b9;
+}
+
+.snip1336 h2 {
+  margin: 0 0 5px;
+  font-weight: 300;
+}
+
+.snip1336 h2 span {
+  display: block;
+  font-size: 0.6em;
+  color: #2980b9;
+}
+
+.snip1336 p {
+  margin: 0 0 10px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-content {
+  margin-left: 16px; /* Add some margin between the image and the content */
+}
+.snap{
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+max-width: 1290px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #141414;
+}
+.snap * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.snap img {
+  max-width: 100%;
+  vertical-align: top;
+  opacity: 0.85;
+}
+
+.snap figcaption {
+  width: 100%;
+  background-color: #141414;
+  padding: 25px;
+  position: relative;
+}
+
+.snap figcaption:before {
+  position: absolute;
+  content: '';
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 0 0 400px;
+  border-color: transparent transparent transparent #141414;
+}
+
+.snap figcaption a {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  display: inline-block;
+  opacity: 0.65;
+  width: 47%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.snap figcaption a:hover {
+  opacity: 1;
+}
+
+.snap .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+  z-index: 1;
+  max-width: 90px;
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.snap .follow {
+  margin-right: 4%;
+  border-color: #2980b9;
+  color: #2980b9;
+}
+
+.snap h2 {
+  margin: 0 0 5px;
+  font-weight: 300;
+}
+
+.snap h2 span {
+  display: block;
+  font-size: 0.70em;
+  color: #2980b9;
+}
+
+.snap p {
+  margin: 0 0 10px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+.image-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-right:auto;
+}
+
+.image-container img {
+  width: 25%;
+}
+
+.card-content {
+  width: 75%;
+  padding: 16px;
+}
+
+.profile {
+  width: 100%;
+}
+
+.right {
+  margin-top: 16px;
+}
+
+
+/*    */
+
+.profile-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  transition: width 0.3s ease;
+  margin-left: 150px;
+  margin-right: 10px;
+}
+
+.profile-image-container {
+  flex-basis: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card:hover {
+  width: 80%;
+  height: 400px;
+}
+
+.profile-card:hover .profile-image-container {
+  transform: scale(1.1);
+}
+
+.profile-details {
+  flex-basis: 50%;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  transition: right 0.3s ease;
+  display: none;
+}
+
+.profile-card:hover .profile-details {
+  right: 0;
+  display: block;
+}
+
+.snip1336:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+
+
+.home-section {
+  /* background-color: #f6f8fa; */
+  padding: 50px 0;
+  text-align: left;
+  width: 60%;
+  margin-top: 70px;
+  margin-left:100px;
+}
+
+.home-content {
+  max-width: 750px;
+  margin: 0 auto;
+ margin-top: -30px;
+ 
+}
+
+.highlighted {
+  font-size: 60px;
+  font-weight: 700;
+  color: #4fcbeb;
+  margin-bottom: 15px;
+  /* padding-bottom: 10px; */
+  
+}
+
+.name {
+  font-size: 130px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 10px;
+
+}
+
+.description {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 10px;
+
+}
+
+.summary {
+  font-size: 18px;
+  font-weight: 400;
+  color: #8b8a8a;
+  line-height: 1.6;
+  
+}
+
+
+
+.logo {
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #4fcbeb;
+  background-color: #000000;
+  padding:  20px;
+  border: 3px solid#4fcbeb;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.logo-text {
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+}
+
+.logo-icon{
+  margin-left: 5px;
+}
+
+.image-container {
+  width: 3000px;
+  height: 450px;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+
+.your-image-class {
+  
+    width: 900px;
+    height: 600px;
+    border-radius: 50%;
+    overflow: hidden;
+ 
+  
 }

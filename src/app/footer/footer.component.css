@@ -1,4 +1,4 @@
-footer {
+/* footer {
     background-color:#0a0a0a !important;
     color: #fff;
     text-align: center;
@@ -7,4 +7,31 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
+    line-height: 1.55;
+
 }
+ p{
+
+color:#c2185b;;
+ } */
+ footer {
+    background-color: #0a0a0a !important;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    line-height: 1.55;
+  }
+  
+  footer p {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Occupy the full height of the footer */
+  }
+  

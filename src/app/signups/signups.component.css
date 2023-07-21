@@ -12,8 +12,9 @@
   left: 50%;
  
   transform: translate(-50%, -50%);
-  bottom: 50px;
+  margin-bottom: 200px;
   margin-top: 100px;
+  
 }
 
 .form-fields-container {

@@ -1,3 +1,61 @@
+
+<!-- <div class="container"> -->
+<div class="contact-left">
+  <!-- <h2 style="text-align: center;">Contact</h2> -->
+  <h3 class="h3s" >I am not hard to find, let's design something truly spectacular!</h3>
+</div>
+    <div class="contact-right">
+  <mat-card>
+    <mat-card-title id="h1">Contact Form</mat-card-title>
+    <mat-card-content>
+      <form (submit)="submitForm()">
+        <mat-form-field id="f1">
+          <input matInput placeholder="Name" [(ngModel)]="name" name="name" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field id="f1">
+          <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field id="f1">
+          <textarea matInput placeholder="Message" placeholder="Hi Vignesh, I have an idea which needs your expertise......" [(ngModel)]="message" name="message" required></textarea>
+        </mat-form-field>
+        <br>
+        <button id="b1" mat-raised-button color="primary" type="submit">Submit</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- </div> -->
+
+
+
+
+<!-- <div class="container">
+  <h2 style="text-align: center;">Contact</h2>
+  <mat-card>
+    <mat-card-title id="h1">Contact Form</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="submitForm()">
+        <mat-form-field id="f1" >
+          <input matInput placeholder="Name" [(ngModel)]="name" name="name" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field id="f1">
+          <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field id="f1">
+          <textarea matInput placeholder="Message" [(ngModel)]="message" name="message" required></textarea>
+        </mat-form-field>
+        <br>
+        <button id="b1" mat-raised-button color="primary" type="submit">Submit</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div> -->
+
 <div class="contact-container">
 <h2>Get in Touch</h2>
 <p>If you're interested in collaborating with me or have any questions, please don't hesitate to reach out. You can find me on the following platforms:</p>
@@ -6,4 +64,39 @@
   <li>LinkedIn: <a href="https://www.linkedin.com/in/example">linkedin.com/in/example</a></li>
   <li>GitHub: <a href="https://github.com/example">github.com/example</a></li>
 </ul>
+
+
+<p>String Value: {{ stringValue }}</p>
+<p>Number Value: {{ numberValue }}</p>
+<p>Array Value: {{ arrayValue | json }}</p>
+
+
+   <button (click)="sendMessage()">Send Message</button>
+
+
 </div>
+
+
+
+<!-- <div class="profile-card">
+  <div class="profile-image-container">
+    <img class="profile-image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg" alt="Profile image">
+  </div>
+  <div class="profile-details">
+    <h2 class="profile-name" style="font-size: 2.5em; color: #0e71db;">Vignesh</h2>
+    <p class="profile-description" style="color: #ac9a9a; font-size: 1.5em;">Software Developer</p>
+    <mat-card-content>
+      <p style="font-size: 1.8em; font-weight: bold; color: #0e71db;">Vignesh is a highly skilled software developer with over 5 years of experience in building responsive and user-friendly web applications using Angular and Node.js.</p>
+      <ul>
+        <li style="font-size: 1.3em; color: #0e71db;">Proficient in HTML, CSS, JavaScript, and TypeScript</li>
+        <li style="font-size: 1.3em; color: #0e71db;">Expertise in Angular and React frameworks</li>
+        <li style="font-size: 1.3em; color: #0e71db;">Comfortable with Git and agile development methodologies</li>
+        <li style="font-size: 1.3em; color: #0e71db;">Excellent problem-solving and communication skills</li>
+      </ul>
+      <p style="font-size: 1.8em; font-weight: bold; color: #0e71db;">In his current role, Vignesh has delivered multiple successful projects, collaborating with cross-functional teams and ensuring that his solutions are scalable, maintainable, and performant.</p>
+      <p style="font-size: 1.5em; color: #ac9a9a;">Vignesh is passionate about learning new technologies and keeping up with industry trends. He enjoys participating in hackathons and open-source projects in his free time.</p>
+    </mat-card-content>
+</div>
+  
+</div>
+ -->

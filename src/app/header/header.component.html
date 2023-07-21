@@ -1,41 +1,75 @@
-<header>
+<header >
     <nav>
       <i class="fa fa-bars menu-icon" (click)="toggleMenu()"></i>
+      
       <a routerLink="">Home</a>
       <a routerLink="about">About</a>
       <a routerLink="skills">Skills</a>
       <a routerLink="work">Work</a>
-      <a routerLink="contact">Contact</a>
+      <a routerLink="contacts">Contact</a>
       
     </nav>
-    <div>
+    <!-- <div>
       <nav>
+        <a routerLink="dashboard">
+          <mat-icon class="dashboard-icon">dashboard</mat-icon>
+        </a>
        <mat-icon class="account-icon">account_circle</mat-icon> 
       <a routerLink="login">Login</a>
       <a routerLink="signup">Signup</a>
       </nav>
+    </div> -->
+    <div>
+      <nav>
+        <a routerLink="dashboard">
+          <mat-icon class="dashboard-icon">dashboard</mat-icon>
+        </a>
+        <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+          <mat-icon class="account-icon">account_circle</mat-icon>
+        </button>
+        <mat-menu #profileMenu="matMenu">
+          <button mat-menu-item routerLink="profile">Profile</button>
+          <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+        <a routerLink="login">Login</a>
+        <a routerLink="signup">Signup</a>
+      </nav>
     </div>
+    
   </header>
-  
-  <main [ngClass]="{ 'with-open-side-nav': isMenuOpen }" class="content-container" class="main" [class.dark]="isDarkTheme" [class.light]="!isDarkTheme">
+
+
+
+
+
+  <main [ngClass]="{ 'with-open-side-nav': isMenuOpen, 'dark': isDarkTheme, 'light': !isDarkTheme }" class="content-container main">
     <router-outlet class="no-scroll"></router-outlet>
   </main>
   
   <aside [ngClass]="{ 'open': isMenuOpen }">
     <i class="fa fa-times close-icon" (click)="toggleMenu()"></i>
-    <ul>
-   
-      <li><a routerLink="">Home</a></li><mat-divider></mat-divider>
-      <li><a routerLink="about">About</a></li><mat-divider></mat-divider>
-      <li><a routerLink="skills">Skills</a></li><mat-divider></mat-divider>
-      <li><a routerLink="work">Work</a></li><mat-divider></mat-divider>
-      <li><a routerLink="contact">Contact</a></li><mat-divider></mat-divider><br>
-      <!-- <mat-slide-toggle [(ngModel)]="isChecked">Dark Mode: {{isChecked}}</mat-slide-toggle> -->
-      <!-- <button (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button> -->
-      <mat-slide-toggle [(ngModel)]="isDarkTheme">Dark Mode</mat-slide-toggle>
-
-
-      <!-- <mat-slide-toggle [(ngModel)]="isDarkTheme" [label]="isDarkTheme ? 'Dark Mode' : 'Light Mode'"></mat-slide-toggle> -->
-
-    </ul>
+    <div class="account-info-container">
+      <div class="account-image-container">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg" class="account-image" alt="Profile Image" />
+        <div class="account-info">
+          <p class="account-name">Vignesh</p>
+          <p class="account-role">Software Developer</p>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <ul>
+        <li><a routerLink=""><i class="fa fa-home"></i> Home</a></li>
+        <mat-divider></mat-divider>
+        <li><a routerLink="about"><i class="fa fa-info-circle"></i> About</a></li>
+        <mat-divider></mat-divider>
+        <li><a routerLink="skills"><i class="fa fa-cogs"></i> Skills</a></li>
+        <mat-divider></mat-divider>
+        <li><a routerLink="work"><i class="fa fa-briefcase"></i> Work</a></li>
+        <mat-divider></mat-divider>
+        <li><a routerLink="contacts"><i class="fa fa-envelope"></i> Contact</a></li>
+        <mat-divider></mat-divider><br>
+      </ul>
+      <mat-slide-toggle [(ngModel)]="isDarkTheme" (click)="toggleTheme()">Dark Mode</mat-slide-toggle>
+    </div>
   </aside>
+  

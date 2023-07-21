@@ -1,6 +1,78 @@
 <div class="about-container">
 
-<h2>About Me</h2>
+
+<h2 style="font-weight: bold;">ABOUT ME</h2>
 <p>I'm a 20-year-old software developer with a passion for fitness and photography. I've been working out for 3 years and I've been honing my photography skills in my free time. I'm always eager to learn and improve, and I believe that my diverse interests and skills make me a well-rounded individual. I'm excited to share my talents with the world through this portfolio website.</p>
+<mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span [ngClass]="{ 'white-label': isDarkTheme(), 'black-label': isLightTheme() }">Education</span>
+      </ng-template>
+      <h2>Education</h2>
+      <p>Bachelor's Degree in Computer Science</p>
+      <p>Anna University, 2019-2023</p>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span [ngClass]="{ 'white-label': isDarkTheme(), 'black-label': isLightTheme() }">Work Experience</span>
+      </ng-template>
+      <h2>Work Experience</h2>
+      <p>Software Developer</p>
+      <p>Finsurge Private Limited, 2023-present</p>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span [ngClass]="{ 'white-label': isDarkTheme(), 'black-label': isLightTheme() }">Skills</span>
+      </ng-template>
+      <h2>Skills</h2>
+      <ul>
+        <li>JavaScript</li>
+        <li>HTML/CSS</li>
+        <li>Angular</li>
+        <li>Python</li>
+        <li>C</li>
+      </ul>
+    </mat-tab>
+  </mat-tab-group>
+ 
+<br>
+
+<!-- <h2>Project Details</h2>
+<!-- Display project category in lowercase 
+<p>Category: {{ project.category | lowercase }}</p>
+
+<!-- Display project title in uppercase 
+<h3>{{ project.title | uppercase }}</h3>
+
+<!-- Display project start date using date format 
+<p>Start Date: {{ project.startDate | date: 'dd MMM yyyy' }}</p>
+
+<!-- Display pricing information 
+<p>Price: {{ product.price | currency: 'USD' }}</p>
+
+<!-- Display technology stack 
+<p>Technology Stack: {{ technologyStack | json }}</p>
+
+<!-- Display progress percentage 
+<p>Progress: {{ progress | percent }}</p>
+
+<!-- Display number of projects with limited decimal places 
+<p>Number of Projects: {{ numberOfProjects | number: '1.0-0' }}</p>
+
+<!-- Display excerpt or teaser with limited text length 
+<p>{{ text | slice: 0:100 }}</p>
+   -->
+
+
+
+   <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to My Website</h1>
+      <p>Discover the latest trends in web development</p>
+      <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+  </section>
+  
+
 
 <router-outlet></router-outlet></div>
